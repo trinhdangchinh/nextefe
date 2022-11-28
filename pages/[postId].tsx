@@ -2,8 +2,8 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import { useRouter } from "next/dist/client/router";
 import * as React from "react";
 import Link from "next/link";
-import MainLayout from "../layout";
-import PostLayout from "../layout/postpage";
+import MainLayout from "../components/layout";
+import PostLayout from "../components/layout/postpage";
 
 export interface PostPageProps {
   post: any;

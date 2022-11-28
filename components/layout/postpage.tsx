@@ -1,6 +1,6 @@
 import Link from "next/link";
 import * as React from "react";
-import { LayoutProps } from "../models/common";
+import { LayoutProps } from "../../models/common";
 
 async function ListPost({ children }: LayoutProps) {
   const res = await fetch("https://vinfastauto3s.vn/wp-json/wp/v2/posts");

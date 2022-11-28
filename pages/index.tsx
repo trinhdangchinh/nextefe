@@ -6,15 +6,16 @@
 import Link from "next/link";
 import { GetStaticProps, GetStaticPropsContext } from "next";
 import * as React from "react";
-import MainLayout from "../layout";
+import MainLayout from "../components/layout";
 export interface PostListPageProps {
   posts: any[];
 }
+
 export default function PostListPage({ posts }: PostListPageProps) {
   return (
     <div>
       Post List Page
-      <ul>
+      <ul className="">
         {posts.map((post) => (
           <li key={post.id}>
             <Link href={`/${post.id}`}>{post.title}</Link>
@@ -28,17 +29,7 @@ PostListPage.Layout = MainLayout;
 // export default function Home() {
 //   return (
 //     <div>
-//       <div className="max-w-7xl mx-auto p-vw grid grid-cols-1 md:grid-cols-3 gap-4">
-//         <div>
-//           <Card />
-//         </div>
-//         <div>
-//           <Card />
-//         </div>
-//         <div>
-//           <Card />
-//         </div>
-//       </div>
+//
 //     </div>
 //   );
 // }

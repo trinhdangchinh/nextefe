@@ -1,7 +1,7 @@
 import * as React from "react";
-import { LayoutProps } from "../models/common";
+import { LayoutProps } from "../../models/common";
 import Link from "next/link";
-export interface IMainLayoutProps {}
+export interface MainLayoutProps {}
 
 export default function AdminLayout({ children }: LayoutProps) {
   return (
