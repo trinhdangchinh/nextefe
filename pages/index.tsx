@@ -97,7 +97,7 @@ export default function HomePage({ posts }: PostListPageProps) {
             </div>
           ))}
 
-          <div className="mt-[5vh] col-span-12 text-center uppercase ">
+          <div className="mt-[5vh] col-span-12 text-center uppercase text-T48">
             CÁC DÒNG SẢN PHẨM CHÍNH VINFAST
           </div>
           <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">
