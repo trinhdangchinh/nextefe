@@ -64,12 +64,17 @@ export default function FooterSideNav() {
           {btnAray.map((btn) => (
             <li className="my-[16px] ">
               <a key={btn.text} href="">
-                <div className="box-v w-[30px] h-[30px] left-[50%] translate-x-[-50%] relative">
+                <div
+                  key={btn.text}
+                  className="box-v w-[30px] h-[30px] left-[50%] translate-x-[-50%] relative"
+                >
                   {btn.svg}
                 </div>
 
                 <div className="footer__sidenav-text boxtext-v">
-                  <span className="typo-p-1 text-cw">{btn.text}</span>
+                  <span key={btn.text} className="typo-p-1 text-cw">
+                    {btn.text}
+                  </span>
                 </div>
               </a>
             </li>

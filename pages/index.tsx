@@ -85,12 +85,17 @@ export default function HomePage({ posts }: PostListPageProps) {
             <div className="topbot-mmg  col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-[150px] ">
               <div className="card-tinh-nang card1 box-shadow1 relative translate-y-[-50%] top-[50%]">
                 <div className="card1__img ">
-                  <div className="card1__img-icon box-j w-[60px] h-[60px] text-prim translate-x-[-50%] left-[50%]  relative">
+                  <div
+                    key={item.text}
+                    className="card1__img-icon box-j w-[60px] h-[60px] text-prim translate-x-[-50%] left-[50%]  relative"
+                  >
                     {item.svg}
                   </div>
                 </div>
                 <div className="card1__text boxtext-v typo-1 translate-x-[-50%] left-[50%] relative inline-block mt-[5%] ">
-                  <span className="">{item.text}</span>
+                  <span key={item.text} className="">
+                    {item.text}
+                  </span>
                 </div>
                 <a href=""></a>
               </div>
