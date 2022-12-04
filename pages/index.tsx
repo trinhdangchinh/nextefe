@@ -81,19 +81,22 @@ export default function HomePage({ posts }: PostListPageProps) {
             </Link>
           </div>
 
-          {homeCardItems.map((item) => (
-            <div className="topbot-mmg  col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-[150px] ">
+          {homeCardItems.map((item, i) => (
+            <div
+              key={i}
+              className="topbot-mmg  col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-[150px] "
+            >
               <div className="card-tinh-nang card1 box-shadow1 relative translate-y-[-50%] top-[50%]">
                 <div className="card1__img ">
                   <div
-                    key={item.text}
+                    key={i}
                     className="card1__img-icon box-j w-[60px] h-[60px] text-prim translate-x-[-50%] left-[50%]  relative"
                   >
                     {item.svg}
                   </div>
                 </div>
                 <div className="card1__text boxtext-v typo-1 translate-x-[-50%] left-[50%] relative inline-block mt-[5%] ">
-                  <span key={item.text} className="">
+                  <span key={i} className="">
                     {item.text}
                   </span>
                 </div>

@@ -28,9 +28,9 @@ export default function MainLayout({ children }: LayoutProps) {
           {/* <!-- Nav PC --> */}
           <div className="nav__pc relative flex items-center invisible lg:visible mx-[80px] w-[calc(100%-500px)] text-w">
             <ul className="nav__list flex ">
-              {menuList.map((item) => (
-                <li key={item} className="nav__link mx-[1vw]">
-                  <Link className="typo-1 text-cw" href="">
+              {menuList.map((item, i) => (
+                <li key={i} className="nav__link mx-[1vw]">
+                  <Link key={i} className="typo-1 text-cw" href="">
                     {item}
                   </Link>
                 </li>
