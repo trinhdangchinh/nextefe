@@ -86,44 +86,16 @@ export default function FooterAbout() {
   const menuArray = ["Danh muc 1", "Danh muc 1", "Danh muc 1"];
   return (
     <div>
-      <section className="footer__about relative bottom-[0] bg-key text-w">
-        <div className="grid grid-cols-3">
+      <section className="footer__about relative pb-[80px] bg-key text-w">
+        <div className="grid grid-cols-6">
           {/* <div className="footer__about_row row no-gutters"></div> */}
-          <div className="footer__about-info col l-4 m-6 c-10 l-o-0 m-o-0 c-o-1">
-            <div className="footer__about-info-form">
+          <div className="footer__about-info col-span-6 md:col-span-3 lg:col-span-2">
+            <div className="footer__about-info-form  ">
               23
-              {/* <form className="box-p1" action="" autocomplete="on">
-                                <h2 className="typo-1 text-cw boxtext-v footer__about-info-form-title">ĐĂNG KÝ TƯ VẤN</h2>
-                                <select className="w-[30px] h-[30px]  m-[10px]nput1 c-12 topbot-mmg" name="" id="">
-                                    <option>-- Chọn loại xe</option>
-                                    <option>Fadil</option>
-                                    <option>LuxA 2.0</option>
-                                    <option>LuxSA 2.0</option>
-                                    <option>Ô tô điện Vf e34</option>
-                                </select>
-                                <input className="w-[30px] h-[30px]  m-[10px]nput1 c-12" type="text" placeholder="Họ và tên" name="name" required>
-                                <input className="w-[30px] h-[30px]  m-[10px]nput1 c-12 topbot-mmg" type="tel" placeholder="Số điện thoại"
-                                    required name="tel" aria-required="true" pattern="[0-9()#&+*-=.]+"
-                                    title="Chỉ các số và ký tự được chấp nhận (#, -, *)">
-
-                                <div className="boxtext-h">
-                                    <input className="footer_form-checkbox box-check1" type="checkbox" name="trgop">
-                                    <label for="trgop" className="typo-p-1 text-cw">Tính trả góp</label>
-                                </div>
-                                <div className="boxtext-h topbot-mmg">
-                                    <input className="footer_form-checkbox box-check1 " type="checkbox" name="lbanh">
-                                    <label for="lbanh" className="typo-p-1 text-cw">Tính lăn bánh</label>
-                                    <br/>
-                                </div>
-
-                                <textarea className="w-[30px] h-[30px]  m-[10px]nput1 c-12" name="" id="" cols="30" rows="10"
-                                    placeholder="Yêu cầu khác"></textarea><br/>
-                                <button className="w-[30px] h-[30px]  m-[10px]nput1 text-cw" type="submit" formtarget="google.com">GỬI ĐĂNG
-                                    KÝ</button>
-                            </form> */}
+              {/* Form */}
             </div>
           </div>
-          <div className="footer__about-info px-[30px] py-[20px] ">
+          <div className="footer__about-info px-[30px] py-[20px] col-span-6 md:col-span-3 lg:col-span-2 ">
             <h2 className="typo-1 text-cw box-m1">Liên hệ</h2>
             <ul className="flex justify-center ">
               {btnAray.map((btn) => (
@@ -151,7 +123,7 @@ export default function FooterAbout() {
               </a>
             </p>
           </div>
-          <div className="footer__about-info px-[30px] py-[20px]">
+          <div className="footer__about-info px-[30px] py-[20px] col-span-6 md:hidden lg:block lg:col-span-2 ">
             <div className="typo-1 text-cw">
               <ul className="nav__mb-list box-p1">
                 {menuArray.map((menuItem) => (
