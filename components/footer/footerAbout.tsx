@@ -85,18 +85,18 @@ export default function FooterAbout() {
   ];
   const menuArray = ["Danh muc 1", "Danh muc 1", "Danh muc 1"];
   return (
-    <div>
-      <section className="footer__about relative pb-[80px] bg-key text-w">
+    <div className="bg-key text-w pb-[80px] ">
+      <section className="footer__about ">
         <div className="grid grid-cols-6">
           {/* <div className="footer__about_row row no-gutters"></div> */}
+
           <div className="footer__about-info col-span-6 md:col-span-3 lg:col-span-2">
-            <div className="footer__about-info-form  ">
-              23
-              {/* Form */}
-            </div>
+            <div className="footer__about-info-form  ">Form</div>
           </div>
+
           <div className="footer__about-info px-[30px] py-[20px] col-span-6 md:col-span-3 lg:col-span-2 ">
             <h2 className="typo-1 text-cw box-m1">Liên hệ</h2>
+
             <ul className="flex justify-center ">
               {btnAray.map((btn) => (
                 <li key={btn.text} className="w-[30px] h-[30px]  m-[10px]">
@@ -106,6 +106,7 @@ export default function FooterAbout() {
                 </li>
               ))}
             </ul>
+
             <p className="typo-p-1 box-m1">
               Trụ sở chính: Khu kinh tế Đình Vũ – Cát Hải, Đảo Cát Hải, Thị trấn
               Cát Hải, Huyện Cát Hải, Thành phố Hải Phòng, Việt Nam <br />
@@ -123,6 +124,7 @@ export default function FooterAbout() {
               </a>
             </p>
           </div>
+
           <div className="footer__about-info px-[30px] py-[20px] col-span-6 md:hidden lg:block lg:col-span-2 ">
             <div className="typo-1 text-cw">
               <ul className="nav__mb-list box-p1">

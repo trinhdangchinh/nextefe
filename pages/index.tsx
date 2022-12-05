@@ -11,6 +11,8 @@ import MainLayout from "../components/layout";
 import banner from "../public/post-banner-vinfast-20.08.21.jpg";
 import Card from "../components/card";
 import Pagination from "../components/pagination";
+import EmptyLayout from "../components/layout";
+import AdminLayout from "../components/layout/admin";
 
 export interface PostListPageProps {
   posts: any[];
