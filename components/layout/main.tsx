@@ -13,7 +13,7 @@ const menuList = ["VFe34", "VF7", "VF8", "VF9"];
 export default function MainLayout({ children }: LayoutProps) {
   return (
     <>
-      <header className="header__nav h-20 bg-key flex justify-between">
+      <header className="header__nav h-20 bg-key ">
         <div className="flex h-full mx-[1vw] items-center ">
           <div className="header__logo  relative ml-[5vw]">
             <Link href="http://vinfastauto3s.vn">
@@ -47,9 +47,9 @@ export default function MainLayout({ children }: LayoutProps) {
           {/* <!-- End Nav PC -->*/}
         </div>
         {/*   <!-- Nav mob --> */}
-        <div className="space md:hidden w-[50px] h-[100%] "></div>
-        <div className="nav_mob md:hidden w-[80px] h-[100%] flex  items-center justify-center ">
-          <div className="w-[30px] h-[30px] text-w  ">
+        {/* <div className="space md:hidden w-[50px] h-[100%] "></div> */}
+        <div className="nav_mob md:hidden w-[80px] h-[100%] absolute right-0 top-0 ">
+          <div className="w-[30px] h-[30px] text-w l-[-50%] translate-x-[50%] top-[50%] translate-y-[50%] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
