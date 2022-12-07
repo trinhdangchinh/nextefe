@@ -97,7 +97,7 @@ export default function HomePage({ posts }: PostListPageProps) {
                     {item.svg}
                   </div>
                 </div>
-                <div className="card1__text boxtext-v typo-1 translate-x-[-50%] left-[50%] relative inline-block mt-[5%] ">
+                <div className="card1__text boxtext-v text-Tnm translate-x-[-50%] left-[50%] relative inline-block mt-[5%] ">
                   <span key={i} className="">
                     {item.text}
                   </span>
@@ -107,13 +107,13 @@ export default function HomePage({ posts }: PostListPageProps) {
             </div>
           ))}
 
-          <div className="mt-[5vh] col-span-12 text-center uppercase text-T48">
+          <div className="mt-[5vh] col-span-12 text-center uppercase text-Tmd">
             CÁC DÒNG SẢN PHẨM CHÍNH VINFAST
           </div>
           <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">
             <Card />
           </div>
-          <div className="mt-[5vh] col-span-12 text-center uppercase ">
+          <div className="mt-[5vh] col-span-12 text-center uppercase text-Tmd">
             tin tức -sự kiện
           </div>
           <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">

@@ -95,7 +95,7 @@ export default function FooterAbout() {
           </div>
 
           <div className="footer__about-info px-[30px] py-[20px] col-span-6 md:col-span-3 lg:col-span-2 ">
-            <h2 className="typo-1 text-cw box-m1">Liên hệ</h2>
+            <h2 className="text-Tnm text-cw box-m1">Liên hệ</h2>
 
             <ul className="flex justify-center ">
               {btnAray.map((btn) => (
@@ -107,7 +107,7 @@ export default function FooterAbout() {
               ))}
             </ul>
 
-            <p className="typo-p-1 box-m1">
+            <p className="ext-Tsm box-m1">
               Trụ sở chính: Khu kinh tế Đình Vũ – Cát Hải, Đảo Cát Hải, Thị trấn
               Cát Hải, Huyện Cát Hải, Thành phố Hải Phòng, Việt Nam <br />
               Văn Phòng Điều Hành: Tòa nhà Symphony, KĐT Vinhomes Riverside,
@@ -125,8 +125,8 @@ export default function FooterAbout() {
             </p>
           </div>
 
-          <div className="footer__about-info px-[30px] py-[20px] col-span-6 md:hidden lg:block lg:col-span-2 ">
-            <div className="typo-1 text-cw">
+          <div className="footer__about-info px-[30px] py-[20px] col-span-6 hidden lg:block lg:col-span-2 ">
+            <div className="text-Tnm text-cw">
               <ul className="nav__mb-list box-p1">
                 {menuArray.map((menuItem) => (
                   <li key={menuItem} className="col c-9 box-m1 ">

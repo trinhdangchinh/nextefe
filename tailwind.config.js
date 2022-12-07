@@ -3,10 +3,11 @@
 huePrim = 360;
 var sScr = "360";
 var lScr = "1080";
-function TypoSize(minFontSize, maxFontSize) {
-  return `calc(${minFontSize}px + (${maxFontSize} - ${minFontSize}) * (100vw - ${sScr}px) / (${lScr} - ${sScr}))`;
+function TypoSize(minFontSize, maxFontSize, n = 1) {
+  size = `(${minFontSize}px + (${maxFontSize} - ${minFontSize}) * (100vw - ${sScr}px) / (${lScr} - ${sScr}))`;
+  return `calc(${n} * ${size})`;
 }
-console.log(TypoSize(20, 40));
+console.log(TypoSize(20, 40, 1.5));
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -30,12 +31,10 @@ module.exports = {
       linkb: `hsla(200, 80%, 40%, 1)`,
     },
     fontSize: {
-      T24: "20px",
-      T48: TypoSize(20, 40),
-      // T48:
-      T1: "10px",
-      L1: "10px",
-      I1: "10px",
+      Tlg: TypoSize(28, 40),
+      Tmd: TypoSize(20, 30),
+      Tnm: TypoSize(14, 18),
+      Tsm: TypoSize(10, 12),
     },
     extend: {
       spacing: {
