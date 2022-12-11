@@ -7,7 +7,7 @@ function TypoSize(minFontSize, maxFontSize, n = 1) {
   size = `(${minFontSize}px + (${maxFontSize} - ${minFontSize}) * (100vw - ${sScr}px) / (${lScr} - ${sScr}))`;
   return `calc(${n} * ${size})`;
 }
-console.log(TypoSize(20, 40, 1.5));
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",

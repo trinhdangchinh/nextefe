@@ -1,8 +1,7 @@
 // import Head from "next/head";
 // import Image from "next/image";
 // import styles from "../styles/globals.css";
-// import Card from "./components/card.js";
-// import MainLayout from "../layout/main";
+
 import Link from "next/link";
 import Image from "next/image";
 import { GetStaticProps, GetStaticPropsContext } from "next";
@@ -11,8 +10,9 @@ import MainLayout from "../components/layout";
 import banner from "../public/post-banner-vinfast-20.08.21.jpg";
 import Card from "../components/card";
 import Pagination from "../components/pagination";
-import EmptyLayout from "../components/layout";
-import AdminLayout from "../components/layout/admin";
+import HomeCardItem from "../components/homeCardItem";
+
+import ProductCard from "../components/productCard";
 
 export interface PostListPageProps {
   posts: any[];
@@ -37,6 +37,7 @@ const homeCardItems = [
         />
       </svg>
     ),
+    link: "./",
   },
   {
     text: "TẢI BÁO GIÁ XE",
@@ -50,6 +51,7 @@ const homeCardItems = [
         <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z" />
       </svg>
     ),
+    link: "./",
   },
   {
     text: "HỖ TRỢ TRẢ GÓP",
@@ -70,8 +72,60 @@ const homeCardItems = [
         />
       </svg>
     ),
+    link: "./",
   },
 ];
+const postNews = [
+  {
+    img: "/CE16.png",
+    title: "VINFAST LUXSA 2.0",
+    excerpt:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore veritatis quisquam, vel dicta minus eius magnam voluptatem assumenda, tempore, reprehenderit distinctio    nostrum aperiam doloribus illum vitae consequatur error modi? Exercitationem!",
+    date: "21/08/2021",
+  },
+  {
+    img: "/CE16.png",
+    title: "VINFAST LUXSA 3.0",
+    excerpt:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore veritatis quisquam, vel dicta minus eius magnam voluptatem assumenda, tempore, reprehenderit distinctio    nostrum aperiam doloribus illum vitae consequatur error modi? Exercitationem!",
+    date: "21/08/2021",
+  },
+  {
+    img: "/CE16.png",
+    title: "VINFAST LUXSA 3.0",
+    excerpt:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore veritatis quisquam, vel dicta minus eius magnam voluptatem assumenda, tempore, reprehenderit distinctio    nostrum aperiam doloribus illum vitae consequatur error modi? Exercitationem!",
+    date: "21/08/2021",
+  },
+];
+const productList = [
+  {
+    title: "VINFAST LuxA 2.0",
+    img: "/CE16.png",
+    alt: "anh",
+    link: "./",
+  },
+  {
+    title: "VINFAST LuxSA 2.0",
+    img: "/CE16.png",
+    alt: "anh",
+    link: "./",
+  },
+  {
+    title: "VINFAST Fadil",
+    img: "/CE16.png",
+    alt: "anh",
+    link: "./",
+  },
+];
+const pageNumArray = [
+  { num: 1, link: "./" },
+  { num: 2, link: "./" },
+  { num: 3, link: "./" },
+  { num: 4, link: "./" },
+  { num: 5, link: "./" },
+];
+
 export default function HomePage({ posts }: PostListPageProps) {
   return (
     <div>
@@ -84,43 +138,47 @@ export default function HomePage({ posts }: PostListPageProps) {
           </div>
 
           {homeCardItems.map((item, i) => (
-            <div
-              key={i}
-              className="topbot-mmg  col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-[150px] "
-            >
-              <div className="card-tinh-nang card1 box-shadow1 relative translate-y-[-50%] top-[50%]">
-                <div className="card1__img ">
-                  <div
-                    key={i}
-                    className="card1__img-icon box-j w-[60px] h-[60px] text-prim translate-x-[-50%] left-[50%]  relative"
-                  >
-                    {item.svg}
-                  </div>
-                </div>
-                <div className="card1__text boxtext-v text-Tnm translate-x-[-50%] left-[50%] relative inline-block mt-[5%] ">
-                  <span key={i} className="">
-                    {item.text}
-                  </span>
-                </div>
-                <a href=""></a>
-              </div>
+            <div className="topbot-mmg  col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-[150px] ">
+              <HomeCardItem
+                svg={item.svg}
+                text={item.text}
+                href={item.link}
+              ></HomeCardItem>
             </div>
           ))}
 
           <div className="mt-[5vh] col-span-12 text-center uppercase text-Tmd">
             CÁC DÒNG SẢN PHẨM CHÍNH VINFAST
           </div>
-          <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">
-            <Card />
-          </div>
+          {productList.map((product, i) => (
+            <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">
+              <ProductCard
+                key={i}
+                title={product.title}
+                src={product.img}
+                alt={product.alt}
+                href={product.link}
+              ></ProductCard>
+            </div>
+          ))}
           <div className="mt-[5vh] col-span-12 text-center uppercase text-Tmd">
             tin tức -sự kiện
           </div>
-          <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">
-            <Card />
-          </div>
+          {postNews.map((post, index) => (
+            <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">
+              <Card
+                key={index}
+                className=""
+                src={post.img}
+                title={post.title}
+                excerpt={post.excerpt}
+                date={post.date}
+                href=""
+              />
+            </div>
+          ))}
           <div className="my-[5vh] col-span-12 text-center ">
-            <Pagination />
+            <Pagination pages={pageNumArray} />
           </div>
         </div>
       </div>
