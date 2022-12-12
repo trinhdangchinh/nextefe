@@ -14,7 +14,7 @@ export default function NavMob(props) {
       >
         <ul className="nav__mb-list grid ">
           {props.menu.map((item, i) => (
-            <li className="my-[1vh]">
+            <li key={i} className="my-[1vh]">
               <a href={item.link} className="nav__mb-link text-Tnm text-w ">
                 {item.text}
               </a>

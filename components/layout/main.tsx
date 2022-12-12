@@ -18,6 +18,7 @@ const menuList = [
 
 const menuBtn = [
   <svg
+    key="1"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
     focusable="false"
@@ -33,6 +34,7 @@ const menuBtn = [
     />
   </svg>,
   <svg
+    key="2"
     aria-hidden="true"
     focusable="false"
     data-prefix="fas"
@@ -49,6 +51,7 @@ const menuBtn = [
     ></path>
   </svg>,
 ];
+let key = 1;
 
 export default function MainLayout({ children }: LayoutProps) {
   return (
@@ -87,7 +90,7 @@ export default function MainLayout({ children }: LayoutProps) {
         </div>
 
         <div className="nav_mob md:hidden w-[80px] h-[100%] absolute right-0 top-0 ">
-          <NavMob menu={menuList} btn={menuBtn[1]} />
+          <NavMob menu={menuList} btn={menuBtn[key]} />
         </div>
       </header>
       <div className="mt-[80px]"></div>

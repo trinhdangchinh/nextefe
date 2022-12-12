@@ -138,7 +138,10 @@ export default function HomePage({ posts }: PostListPageProps) {
           </div>
 
           {homeCardItems.map((item, i) => (
-            <div className="topbot-mmg  col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-[150px] ">
+            <div
+              key={i}
+              className="topbot-mmg  col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-[150px] "
+            >
               <HomeCardItem
                 svg={item.svg}
                 text={item.text}
@@ -151,9 +154,11 @@ export default function HomePage({ posts }: PostListPageProps) {
             CÁC DÒNG SẢN PHẨM CHÍNH VINFAST
           </div>
           {productList.map((product, i) => (
-            <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">
+            <div
+              key={i}
+              className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit"
+            >
               <ProductCard
-                key={i}
                 title={product.title}
                 src={product.img}
                 alt={product.alt}
@@ -165,9 +170,11 @@ export default function HomePage({ posts }: PostListPageProps) {
             tin tức -sự kiện
           </div>
           {postNews.map((post, index) => (
-            <div className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit">
+            <div
+              key={index}
+              className="product_card col-span-12 md:col-span-4 mt-[5vh]  shadow-[0_0_10px_grey] h-fit"
+            >
               <Card
-                key={index}
                 className=""
                 src={post.img}
                 title={post.title}
