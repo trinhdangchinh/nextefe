@@ -33,7 +33,7 @@ module.exports = {
     fontSize: {
       Tlg: TypoSize(28, 40),
       Tmd: TypoSize(20, 30),
-      Tnm: TypoSize(14, 18),
+      Tnm: TypoSize(12, 14),
       Tsm: TypoSize(10, 12),
     },
     extend: {

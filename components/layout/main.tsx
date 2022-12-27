@@ -3,12 +3,12 @@ import { LayoutProps } from "../../models/common";
 import Link from "next/link";
 import Image from "next/image";
 export interface IMainLayoutProps {}
-import sitelogo from "../../public/logo-vinfast-500x150.png";
+
 import FooterSideNav from "../footer/footerSideNav";
 import FooterMobNav from "../footer/footerMobNav";
 import FooterAbout from "../footer/footerAbout";
 import NavMob from "../header/navMob";
-
+import TestDriveDialog from "../form/testDriveDialog";
 const menuList = [
   { text: "VFe34", link: "./" },
   { text: "VF7", link: "./" },
@@ -59,7 +59,7 @@ export default function MainLayout({ children }: LayoutProps) {
         </div>
       </header>
       <div className="mt-[80px]"></div>
-
+      <TestDriveDialog />
       <div>{children}</div>
       <footer>
         <FooterAbout></FooterAbout>

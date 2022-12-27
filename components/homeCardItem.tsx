@@ -1,5 +1,3 @@
-import React from "react";
-import { ComponentProps } from "../models/component";
 function HomeCardItem(props) {
   return (
     <div className="card-tinh-nang card1 box-shadow1 relative translate-y-[-50%] top-[50%]">
